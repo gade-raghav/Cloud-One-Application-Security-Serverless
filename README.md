@@ -53,23 +53,23 @@ There are two approaches to add layer to lambda functions :
 1. Add layer to function
 
 Navigate to Lambda Functions Configuration tab on AWS Console and click on Add a layer.
-[Add Layer](/images/layers.png)
+![Add Layer](/images/layers.png)
 
 Click Specify an ARN and enter it.
 You can find the appropriate LayerVersionARN on [this page](https://cloudone.trendmicro.com/docs/application-security/downloads/).
-[arn](/images/arn.png)
+![arn](/images/arn.png)
 
 
 Navigate to aws Lambda function and select Edit in Runtime Settings. Select Custom runtime and click save.
-[Custom Runtime](/images/customrt.png)
+![Custom Runtime](/images/customrt.png)
 
 In Environment Variables section add TREND_AP_KEY and TREND_AP_SECRET (Group Credentials).
-[Custom Runtime Vars](/images/crvars.png)
+![Custom Runtime Vars](/images/crvars.png)
 
 Sometimes we may not be able to use Custom Runtime. In that case we can use AWS Runtimes( eg: Python, Node.js, Ruby etc).
 
 However, in case we are using AWS Runtime, we are supposed to add the following Environment Variables and make few changes to code.
-[Vars](/images/lambdavars.png)
+![Vars](/images/lambdavars.png)
 
 ```
 TREND_AP_KEY: < key from Application Security Dashboard >
@@ -137,28 +137,28 @@ exports.handler = trend_app_protect.api.aws_lambda.protectHandler(_handler);
 
 Application Security detects and offers protection against wide range of attacks at runtime. We can get analysis of all requests made to the application and decide wheather to allow it or to take protective measures. Set it to *Report* for all modules in order to detect all the malicious requests made. 
 
-[Inital](/images/modules.png)
+![Inital](/images/modules.png)
 
 
 ### Enabling Required Modules 
 
 There are many module policies offered by Application Security and we can enable/disable them depending upon requirement. In case we do not require Malicious File Upload module, we can turn it off.
 
-[deactivate module](/images/deactivatemodule.png)
+![deactivate module](/images/deactivatemodule.png)
 
-[deactivate module2](/images/deactivatemodule2.png)
+![deactivate module2](/images/deactivatemodule2.png)
 
 ### Monitoring the events 
 
 After completing the setup, we are all set to monitor the requests made to our application and change the module policies accordingly.
 
 Set the Illegal File Access policy to Report and make an illegal file access (For demo purpose).
-[reportmodule](/images/detected.png)
+![reportmodule](/images/detected.png)
 
 It has reported the request, however it will only block the request when we set it to Mitigate. The following request has been blocked.
-[change mitigate](images/changepolicy.png)
+![change mitigate](images/changepolicy.png)
 
-[blocked](/images/attackblocked.png)
+![blocked](/images/attackblocked.png)
 
 
 
