@@ -25,9 +25,9 @@ We will be going through the following steps :
 
 - Trend Micro Clound One Account ([Free trial account](https://cloudone.trendmicro.com/))
 
-## Let's Start
+#### Let's Start
 
-#### Application Group Creation 
+### Application Group Creation 
 
 1. Login to Cloud One Account and select Application security. 
 
@@ -42,7 +42,7 @@ We will be going through the following steps :
 ![Credentials](/images/appseccredentials.png)
 
 
-#### Add Layer to Lambda
+### Add Layer to Lambda
 
 There are two approaches to add layer to lambda functions :
  
@@ -124,17 +124,17 @@ exports.handler = trend_app_protect.api.aws_lambda.protectHandler(_handler);
 ```
 
 
-#### Creating Policy, setting it to detection mode for all modules
+### Creating Policy, setting it to detection mode for all modules
 
 Application Security detects and offers protection against wide range of attacks at runtime. We can get analysis of all requests made to the application and decide wheather to allow it or to take protective measures. Set it to *Report* for all modules in order to detect all the malicious requests made. 
 
 
-#### Enabling Required Modules 
+### Enabling Required Modules 
 
 There are many module policies offered by Application Security and we can enable/disable them depending upon requirement. In case we do not require Malicious File Upload module, we can turn it off.
 
 
-#### Monitoring the events 
+### Monitoring the events 
 
 After completing the setup, we are all set to monitor the requests made to our application and change the module policies accordingly.
 
