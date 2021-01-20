@@ -25,6 +25,8 @@ We will be going through the following steps :
 
 - Trend Micro Clound One Account ([Free trial account](https://cloudone.trendmicro.com/))
 
+- This documentation assumes that Lambdas are already available
+
 #### Let's Start
 
 ### Application Group Creation 
