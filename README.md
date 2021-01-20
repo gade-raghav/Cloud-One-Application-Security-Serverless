@@ -33,7 +33,7 @@ We will be going through the following steps :
 
 1. Login to Cloud One Account and select Application security. 
 
-![Application Security](/images/applicationsecurity.png)
+![Application Security](/images/applicationsec.png)
 
 2. Create a new group.
 
